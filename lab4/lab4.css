@@ -1,0 +1,148 @@
+body {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav colA ads"
+    "nav article ads"
+    "nav article colB"
+    "footer footer footer";
+  grid-template-rows: 2fr 1fr 5fr 1fr 2fr;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-gap: 0px;
+  height: 100vh;
+  margin: 0;
+  }
+header, footer, article, nav, colA, colB {
+  padding: 0px;
+  background: white;
+}
+#pageHeader {
+  grid-area: header;
+  background: #B0C4DE;
+  display: grid;
+  grid-template-areas:
+  ". . . . ."
+  ". x1 . headertext ."
+  ". . . . .";
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 6fr 8fr 6fr 1fr;
+  height: 20vh;
+}
+#pageFooter {
+  grid-area: footer;
+  background: #B0C4DE;
+  background: #B0C4DE;
+  display: grid;
+  grid-template-areas:
+  ". . . . ."
+  ". footertext . y1 ."
+  ". . . . .";
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 6fr 8fr 6fr 1fr;
+  height: 20vh;
+}
+#work {
+  grid-area: article;
+  display: inline-block;
+  background: #FFFFFF;
+  visibility: hidden;
+  }
+#anim {
+  display: inline-block;
+  position: relative;
+  width: calc(100% - 10px);
+  height: calc(100% - 50px);
+  outline: 5px solid lightgreen;
+  background-image: url("voda-navsegda-64x64.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+#circlediv{
+  display: inline-block;
+  transition: 0.15s ease;
+  position: absolute;
+  top: calc(50% - 10px);
+  left: calc(50% - 10px);
+  height: 20px;
+  width: 20px;
+  background-color: none;
+  border-radius: 50%;
+  border: solid;
+}
+#circlecanvas{
+  visibility: hidden;
+}
+#controls {
+  height: 50px;
+  display: grid;
+  grid-template-areas: 
+  ". selectdiv selectcanvas . startbutton closebutton";
+  grid-template-columns: 8fr 1fr 1fr 1fr 1fr 1fr;
+}
+#selectcanvas {
+  grid-area: selectcanvas;
+}
+#selectdiv {
+  grid-area: selectdiv;
+}
+#startbutton {
+  grid-area: startbutton;
+}
+#playbutton {
+  grid-area: playbutton;
+}
+#controls_text {
+  grid-area: controls_text;
+}
+#closebutton {
+  grid-area: closebutton;
+}
+#mainNav {
+  grid-area: nav;
+  background: #FFC0CB;
+  }
+#siteAds {
+  grid-area: ads;
+  background: #FFC0CB;
+  }
+#coloumnA {
+  grid-area: colA;
+  display: grid;
+  grid-template-areas: "controls_text playbutton";
+  grid-template-columns: 11fr 1fr 1fr;
+  background: #ADD8E6;
+  }
+#coloumnB {
+  grid-area: colB;
+  background: #ADD8E6;
+}
+#x {
+  grid-area: x1;
+  background: #FFFFFF;
+  text-align: left;
+  }
+#y {
+  grid-area: y1;
+  background: #FFFFFF;
+  text-align: center;
+}
+#header1 {
+  grid-area: headertext;
+  text-align: right;
+  background-color: none;
+  font-family:'SF UI Display Medium';
+}
+
+#footer1{
+  grid-area: footertext;
+  text-align: left;
+  background-color: none;
+  font-family:'SF UI Display Medium';
+}
+.texts {
+margin: 5%;
+}
+.usualtext {
+font-family: Comic Sans MS;
+margin: 5%;
+}

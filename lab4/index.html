@@ -1,0 +1,39 @@
+<!doctype html>
+<title>Example</title>
+<head>
+  <link rel="stylesheet" href="lab4.css" />
+</head>
+<body onload="initialscript()">
+  <header id="pageHeader">
+<div id="x"> <h1 class="texts"> З'їв лапшу </h1> </div>
+<div id="header1"> <p class="usualtext"> Анімації </p> </div>
+</header>
+  <article id="work">
+    <div id="controls">
+      <h3 id="infomessage">Nothing here.</h3>
+      <button id="selectdiv" onclick="choosediv()" disabled>Div</button>
+      <button id="selectcanvas" onclick="choosecanvas()">Canvas</button>
+      <button id="startbutton" onclick="circanim()">Start</button>
+      <button id="closebutton" onclick="closework()">Close</button>
+    </div>
+    <div id="anim">
+       <canvas id="circlecanvas" width="240px" height="240px"></canvas>
+       <div id="circlediv"></div>
+    </div>
+  </article>
+  <div id="coloumnA">
+    <h2 id="controls_text">Controls</h2>
+    <button id="playbutton" onclick="openwork()">Play</button>
+  </div>
+  <nav id="mainNav"><h2>Лабораторна робота №4</h2></nav>
+  <div id="siteAds">
+    <h2>Дар'я Ропаєва</h2>
+    <div id=logs></div>
+  </div>
+  <div id="coloumnB">party: <em>hard</em>;<br />transition: <em>ease</em>;</div>
+  <footer id="pageFooter">
+<div id="y"> <h2 class="texts"> Борись ушу </h2> </div>
+<div id="footer1"> <p class="usualtext"> footer </p> </div>
+</footer>
+<script src="lab4.js"></script> 
+</body>

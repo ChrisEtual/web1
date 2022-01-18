@@ -1,0 +1,134 @@
+<!doctype html>
+<title>Example</title>
+<style>
+body {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav colA ads"
+    "nav article ads"
+    "nav article colB"
+    "footer footer footer";
+  grid-template-rows: 3fr 1fr 4fr 1fr 3fr;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 0px;
+  height: 100vh;
+  margin: 0;
+  }
+header, footer, article, nav, colA, colB {
+  padding: 0px;
+  background: white;
+}
+#pageHeader {
+  grid-area: header;
+  background: #B0C4DE;
+  display: grid;
+  grid-template-areas:
+  ". . . . ."
+  ". x1 . headertext ."
+  ". . . . .";
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 6fr 8fr 6fr 1fr;
+  height: 25vh;
+}
+#pageFooter {
+  grid-area: footer;
+  background: #B0C4DE;
+  background: #B0C4DE;
+  display: grid;
+  grid-template-areas:
+  ". . . . ."
+  ". footertext . y1 ."
+  ". . . . .";
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 6fr 8fr 6fr 1fr;
+  height: 25vh;
+}
+#mainArticle {
+  grid-area: article;
+  background: #FFFFFF;
+  }
+#mainNav {
+  grid-area: nav;
+  background: #FFC0CB;
+  }
+#siteAds {
+  grid-area: ads;
+  background: #FFC0CB;
+  }
+#coloumnA {
+  grid-area: colA;
+  background: #ADD8E6;
+  }
+#coloumnB {
+  grid-area: colB;
+  background: #ADD8E6;
+}
+#x {
+  grid-area: x1;
+  background: #FFFFFF;
+  text-align: left;
+  }
+#y {
+  grid-area: y1;
+  background: #FFFFFF;
+  text-align: center;
+}
+#header1 {
+  grid-area: headertext;
+  text-align: right;
+  background-color: none;
+  font-family:'SF UI Display Medium';
+}
+
+#footer1{
+  grid-area: footertext;
+  text-align: left;
+  background-color: none;
+  font-family:'SF UI Display Medium';
+}
+.texts {
+margin: 5%;
+}
+.usualtext {
+font-family: Comic Sans MS;
+margin: 5%;
+}
+</style>
+<body>
+  <header id="pageHeader">
+<div id="x"> <h1 class="texts"> З'їв лапшу </h1> </div>
+
+<div id="header1"> <p class="usualtext"> Замітки з лаби 1</p> </div>
+</header>
+  <article id="mainArticle">
+    <img src="wushu.jpg" usemap="#wushumap" height="100%" />
+    <map name="wushumap">
+      <area target="_blank" alt="прийом Сюбу" title="прийом Сюбу" href="http://www.thewushucentre.com/wushu-dictionary/11-strokes/xubu-.html" coords="287,1,359,145" shape="rect">
+      <area target="_blank" alt="прийом Мабу" title="прийом Мабу" href="http://www.thewushucentre.com/wushu-photos/wushu-basics/mabu.html" coords="1,1,98,130" shape="rect">
+      <area target="_blank" alt="прийом Ґонбу" title="прийом Ґонбу" href="http://www.thewushucentre.com/wushu-photos/wushu-basics/gongbu.html" coords="98,1,207,130" shape="rect">
+      <area target="_blank" alt="прийом Банмабу" title="прийом Банмабу" href="http://www.thewushucentre.com/wushu-photos/wushu-basics/banmabu.html" coords="208,1,284,147" shape="rect">
+      <area target="_blank" alt="прийом Себу" title="прийом Себу" href="http://www.thewushucentre.com/wushu-photos/wushu-basics/xiebu.html" coords="457,129,363,0" shape="rect">
+      <area target="_blank" alt="прийом Дулібу" title="прийом Дулібу" href="http://www.thewushucentre.com/wushu-dictionary/9-strokes/dulibu-.html" coords="90,283,0,131" shape="rect">
+      <area target="_blank" alt="прийом Пубу" title="прийом Пубу" href="http://www.thewushucentre.com/wushu-photos/wushu-basics/pubu.html" coords="94,133,188,284" shape="rect">
+      <area target="_blank" alt="прийом Цілоньбу" title="прийом Цілоньбу" href="http://www.thewushucentre.com/wushu-dictionary/11-strokes/qilongbu-.html" coords="190,151,274,282" shape="rect">
+      <area target="_blank" alt="прийом Ґуйбу" title="прийом Ґуйбу" href="http://www.thewushucentre.com/wushu-dictionary/13-strokes/guibu-.html" coords="276,152,355,283" shape="rect">
+      <area target="_blank" alt="прийом Хеньданьбу" title="прийом Хеньданьбу" href="http://www.thewushucentre.com/wushu-dictionary/14-to-16-strokes/hengdangbu-.html" coords="361,136,458,283" shape="rect">
+  </map>
+  </article>
+  <div id="coloumnA"><h2>Прийоми ушу</h2></div>
+  <nav id="mainNav">
+    <h3>Меню навігації</h3>
+    <p><a href="main.html">Головна сторінка</a></p>
+    <p><a href="link1.html">Сторінка 1 - Різновиди лапши</a></p>
+    <p><a href="link2.html">Сторінка 2 - Приготування лапши</a></p>
+    <p><a href="link3.html">Сторінка 3 - Борці ушу</a></p>
+    <p>Сторінка 4 - Прийоми ушу (це тут)</p>
+  </nav>
+  <div id="siteAds">Ads</div>
+  <div id="coloumnB">фотографія стійок взята з <a href="https://www.martialtalk.com/threads/what-does-your-system-call-these-stances.133088/">сайту тих, хто з'їв дуже багато лапши</a></div>
+  <footer id="pageFooter">
+<div id="y"> <h2 class="texts"> Борись ушу </h2> </div>
+<div id="footer1"> <p class="usualtext"> footer </p> </div>
+</footer>
+</body>
